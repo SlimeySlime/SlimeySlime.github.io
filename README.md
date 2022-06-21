@@ -4,7 +4,7 @@
 
 ## to be
 
-포트폴리오 + Today I Learn
+포트폴리오 + Today I Learn + ..@
 
 ### `npm test`
 
