@@ -1,5 +1,8 @@
 import React from "react";
 
+// /img/wall/rainworldtop.jpg
+// /img/project/bdan2.png
+
 const Bdanbonga = () => {
 
     return(
@@ -9,10 +12,10 @@ const Bdanbonga = () => {
             </div>
             <div className="flex flex-1 justify-start mobile:flex-col">
                 <div className="flex-col">
-                    <img src="/img/project/bdan1.png" className="m-4 h-96 mobile:w-auto border rounded-lg shadow" alt="bdan1" />
-                    <img src="/img/project/bdan3.png" className="m-4 h-96 mobile:w-auto border rounded-lg shadow" alt="bdan3" />
+                    <img src="./img/project/bdan1.png" className="m-4 h-96 mobile:w-auto border rounded-lg shadow" alt="bdan1" />
+                    <img src="./img/project/bdan3.png" className="m-4 h-96 mobile:w-auto border rounded-lg shadow" alt="bdan3" />
                 </div>
-                <img src="/img/project/bdan2.png" className="m-4 border rounded-lg shadow" alt="bdan2" />
+                <img src="img/project/bdan2.png" className="m-4 border rounded-lg shadow" alt="bdan2" />
                 
             </div>
 
