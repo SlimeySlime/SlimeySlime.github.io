@@ -3,8 +3,9 @@ import React from "react";
 const WallPaper = () => {
 
     return(
-        <div className="flex min-h-screen justify-center items-center">
-            im WallPaper
+        <div className="min-h-screen flex flex-1 justify-center items-center bg-blue-500">
+            {/* <p>흠</p> */}
+            <img src="/img/wall/rainworldtop.jpg" className="object-cover" alt="rainworld" />
         </div>
     )
 }
