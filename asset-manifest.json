@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.ba8175dc.css",
-    "main.js": "/static/js/main.02e9b421.js",
+    "main.css": "/static/css/main.eb90befb.css",
+    "main.js": "/static/js/main.5b9666d3.js",
     "static/js/787.31c43376.chunk.js": "/static/js/787.31c43376.chunk.js",
     "static/media/ubuntu-v20-latin-regular.woff": "/static/media/ubuntu-v20-latin-regular.6a317272decf6d247038.woff",
     "static/media/ubuntu-v20-latin-regular.woff2": "/static/media/ubuntu-v20-latin-regular.2f02effe392a63dc07a5.woff2",
     "static/media/logo_1_tp.svg": "/static/media/logo_1_tp.ad514e167d428b8247b59656466dd9d0.svg",
     "index.html": "/index.html",
-    "main.ba8175dc.css.map": "/static/css/main.ba8175dc.css.map",
-    "main.02e9b421.js.map": "/static/js/main.02e9b421.js.map",
+    "main.eb90befb.css.map": "/static/css/main.eb90befb.css.map",
+    "main.5b9666d3.js.map": "/static/js/main.5b9666d3.js.map",
     "787.31c43376.chunk.js.map": "/static/js/787.31c43376.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba8175dc.css",
-    "static/js/main.02e9b421.js"
+    "static/css/main.eb90befb.css",
+    "static/js/main.5b9666d3.js"
   ]
 }
