@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'ubuntu' : ['Ubuntu'],
+        'happy' : ['Happiness-Sans-Bold'],
+        'happy-title' : ['Happiness-Sans-Title'],
       },
       screens: {
         'mobile' : {'max': '640px'},

@@ -8,21 +8,22 @@ import Ref from './nav/Ref';
 import SideNav from './nav/SideNav';
 import PassManager from './project/pass';
 import Bdanbonga from './project/bdan';
+import NotFound from './NotFount';
 
 function App() {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col min-h-screen justify-center">
       <TopNav />
-      {/* <div className='flex flex-1 w-screen'> */}
       <SideNav />
+      {/* <WallPaper /> */}
       <Routes className='flex-1'>
         <Route path='/' element={<WallPaper />}/>
         <Route path='/main' element={<Main />}/>
         <Route path='/ref' element={<Ref />}/>
         <Route path='/pass' element={<PassManager />}/>
         <Route path='/bdanbonga' element={<Bdanbonga />}/>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
-      {/* </div> */}
     </div>
   );
 }

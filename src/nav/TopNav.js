@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from 'react-router-dom'
-
+import { MdSignalWifi4BarLock } from "react-icons/md";
+import { FaBatteryThreeQuarters, FaVolumeMute } from "react-icons/fa";
 
 const helpMsg = [
     'Really.. i need help..',
@@ -48,14 +49,14 @@ const TopNav = () => {
     }
 
     return(
-        <div className="flex flex-1 sticky top-0 left-0 py-1 bg-slate-900 text-slate-300 justify-between z-50
+        <div className="flex flex-1 sticky max-h-8 top-0 left-0 py-1 bg-slate-900 text-slate-300 justify-between z-50
                         mobile:flex-col">
             <div className="flex flex-1">
                 <div className="pl-2 font-ubuntu font-semibold">
                     <Link to='/' className="hover:text-slate-50">Slimey</Link>
                 </div>
                 <div className="pl-2 font-ubuntu">
-                    <a href="https://github.com/SlimeySlime" className="hover:text-white">GitHub</a>
+                    <a href="https://github.com/SlimeySlime" target='_blank' rel='gitpage' className="hover:text-white">GitHub</a>
                 </div>
                 <div className="pl-2 font-ubuntu">
                     <a href="#" className="hover:text-white">TIL</a>
@@ -64,7 +65,7 @@ const TopNav = () => {
                     <a href="#" className="hover:text-white">Edit</a>
                 </div>
                 <div className="pl-2 font-ubuntu">
-                    <a href="#" className="hover:text-white">View</a>
+                    <a href="#" className="hover:text-white">Version</a>
                 </div>
                 <div className="pl-2 font-ubuntu">
                     <a href="#" className="hover:text-white" onClick={() => {help()}}>Help</a>
@@ -73,13 +74,13 @@ const TopNav = () => {
                     <Link to={'/ref'}>ref</Link>
                 </div>
             </div>
-            <div className="flex flex-1">
+            <div className="flex flex-1 font-ubuntu">
                 {DisplayDate(currentTime)}
             </div>
-            <div className="flex">
-                <p>와파</p>
-                <p>볼륨</p>
-                <p>빠떼리</p>
+            <div className="flex mr-4 gap-2">
+                <MdSignalWifi4BarLock className="m-1"/>
+                <FaVolumeMute className="m-1" />
+                <FaBatteryThreeQuarters className="m-1" />
             </div>
         </div>
 
