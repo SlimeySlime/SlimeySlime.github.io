@@ -71,7 +71,7 @@ const Bdanbonga = () => {
                     </div>
                 </div>
                 <div className="m-4">
-                    <p className="text-xl mt-4">Express 서버에서 MsSql 서버와 통신</p>
+                    <p className="text-xl mt-4">Express 서버에서 MsSql DB와 통신</p>
                     <p className="text-sm font-sans mt-2">REST API로 프론트엔드로 데이터 교환</p>
                     <p className="text-xl mt-4">구글 클라우드 플랫폼으로 배포</p>
                     <p className="text-sm font-sans mt-2">computer engine과 cloud storage사용</p>

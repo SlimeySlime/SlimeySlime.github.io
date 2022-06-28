@@ -70,7 +70,7 @@ const TopNav = () => {
                 <div className="pl-2 font-ubuntu">
                     <a href="#" className="hover:text-white" onClick={() => {help()}}>Help</a>
                 </div>
-                <div className="pl-2 font-ubuntu">
+                <div className="hidden pl-2 font-ubuntu">
                     <Link to={'/ref'}>ref</Link>
                 </div>
             </div>
