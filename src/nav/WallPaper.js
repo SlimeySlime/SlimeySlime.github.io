@@ -7,6 +7,10 @@ const WallPaper = () => {
 
     const [portfolioWindow, setPortpolioWindow] = useState(false)
 
+    const closeTab = () => {
+        setPortpolioWindow(!portfolioWindow)
+    }
+
     return(
         <div className="flex flex-grow bg-gradient-to-b from-red-500 to-purple-900">
             {/* <img src="img/wall/19-ermine-wallpaper.jpg" alt="wallpaper" className="object-cover" /> */}
@@ -34,7 +38,7 @@ const WallPaper = () => {
             </div>
             {portfolioWindow &&
             <div className="absolute left-0 right-0 container flex flex-1">
-                <Portfolio />
+                <Portfolio close={closeTab}/>
             </div>
             }
         </div>
