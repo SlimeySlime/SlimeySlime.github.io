@@ -11,9 +11,9 @@ const Bdanbonga = () => {
                 <p className="m-12 text-4xl font-happy-title text-center ">한복 갤러리</p>
                 <p className="ml-8 -mb-4 text-2xl font-happy-title">프로젝트 프리뷰</p>
                 <div className="grid grid-cols-2 gap-6">
-                    <img src="img/project/bdan1.png" className="m-4 mobile:w-auto rounded-lg shadow" alt="bdan1" />
-                    <img src="img/project/bdan2.png" className="m-4 row-span-2 rounded-lg shadow" alt="bdan2" />
-                    <img src="img/project/bdan3.png" className="m-4 mobile:w-auto rounded-lg shadow" alt="bdan3" />
+                    <img src="/img/project/bdan1.png" className="m-4 mobile:w-auto rounded-lg shadow" alt="bdan1" />
+                    <img src="/img/project/bdan2.png" className="m-4 row-span-2 rounded-lg shadow" alt="bdan2" />
+                    <img src="/img/project/bdan3.png" className="m-4 mobile:w-auto rounded-lg shadow" alt="bdan3" />
                 </div>
             </div>
 

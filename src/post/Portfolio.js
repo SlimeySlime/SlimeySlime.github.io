@@ -1,8 +1,8 @@
 import React from "react";
 import { TbPhone, TbMail, TbBrandGithub } from "react-icons/tb";
-import { GrStop, GrClose } from "react-icons/gr";
+// import { GrStop, GrClose } from "react-icons/gr";
 import { AiOutlineClose, AiOutlineBorder } from "react-icons/ai";
-
+import logo from '../logo_1_tp.svg'
 
 const Portfolio = ({close}) => {
 
@@ -62,7 +62,8 @@ const Portfolio = ({close}) => {
                     <p>2021</p>
                     <div className="flex-col col-span-5 mb-4">
                         <p className="text-2xl font-happy">PassManager 
-                            <a href="/pass" className="text-sm p-2 hover:text-teal-500">[Link]</a>
+                            <img src="/img/project/Golden_key.webp" className="inline pb-1 w-6" alt="" />
+                            {/* <a href="/pass" className="text-sm p-2 hover:text-teal-500">[Link]</a> */}
                         </p>
                         <p className="font-ubuntu">
                             비밀번호 저장 안드로이드 앱<br />
@@ -78,7 +79,8 @@ const Portfolio = ({close}) => {
                     <p>2022</p>
                     <div className="flex-col col-span-5 mb-4">
                         <p className="text-2xl font-happy">한복 갤러리 
-                            <a href="/bdanbonga" className="text-sm p-2 hover:text-teal-500">[Link]</a>
+                            <img src={logo} className="ml-2 mb-1 inline w-6 bg-teal-800" fill="c3c3c3" alt="" />
+                            {/* <a href="/bdanbonga" className="text-sm p-2 hover:text-teal-500">[Link]</a> */}
                         </p>
                         <p className="font-ubuntu">
                             한복 갤러리 웹 사이트 <br />
