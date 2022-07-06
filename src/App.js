@@ -12,7 +12,7 @@ import NotFound from './NotFount';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen justify-center overflow-hidden">
+    <div className="flex flex-col min-h-screen justify-start">
       <TopNav />
       <SideNav />
       {/* <WallPaper /> */}
