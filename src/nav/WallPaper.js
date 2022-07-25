@@ -1,18 +1,32 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
-import { ImProfile } from "react-icons/im";
+import { ImFileExcel, ImProfile } from "react-icons/im";
 import Portfolio from "../post/Portfolio";
+import TestPage from "../post/tp";
 
 const WallPaper = () => {
 
-    const [portfolioWindow, setPortpolioWindow] = useState(false)
+    const [portfolioWindow, setPortpolioWindow] = useState(true)
+    const [testWindow, setTestWindow] = useState(true)
 
-    const closeTab = () => {
-        setPortpolioWindow(!portfolioWindow)
+    const closeTab = (tab) => {
+        console.log('open', tab)
+        switch (tab) {
+            case 'profile':
+                setPortpolioWindow(!portfolioWindow)
+                break;
+            case 'test':
+                setTestWindow(!testWindow)
+                break;
+            default:
+                break;
+        }
+
     }
 
+
     return(
-    <div className="flex flex-grow bg-gradient-to-br to-purple-600 via-rose-500 from-orange-600">
+    <div className="flex flex-grow bg-gradient-to-br to-purple-900 via-rose-500 from-orange-500">
         {/* image cover에서 그냥 gradient */}
         <div className="ml-16 grid grid-rows-12 justify-center items-center ">
         
@@ -23,7 +37,13 @@ const WallPaper = () => {
             <div className="flex flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50"
                 onClick={() => {setPortpolioWindow(!portfolioWindow)}}>
                 <ImProfile size={"52"} color="black" className=''/>
-                <p className="font-ubuntu font-semibold">포트폴리오</p>
+                <p className="font-ubuntu font-semibold">프로필</p>
+                
+            </div>
+            <div className="flex flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50"
+                onClick={() => {setTestWindow(!testWindow)}}>
+                <ImFileExcel size={"52"} color="black" className=''/>
+                <p className="font-ubuntu font-semibold">테스트</p>
                 
             </div>
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
@@ -36,8 +56,16 @@ const WallPaper = () => {
         {portfolioWindow &&
         <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
             <Portfolio close={closeTab}/>
+        </div> 
+        }
+
+        {testWindow && 
+        <div className="absolute left-0 right-0 container flex flex-1">
+            <TestPage close={closeTab} />
         </div>
         }
+
+
         {/* <div className={portfolioWindow ? "opacity-100 translate-x-10?" : "opacity-0 " + " absolute left-0 right-0 container flex flex-1 transition-opacity duration-500 "}>
             <Portfolio close={closeTab}/>
         </div> */}

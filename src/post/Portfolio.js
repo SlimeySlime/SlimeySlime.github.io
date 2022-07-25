@@ -11,7 +11,7 @@ const Portfolio = ({close}) => {
             {/* 상단 */}
             <div className="sticky top-0 flex flex-1 pr-4 p-1 bg-slate-700 justify-end items-center rounded-t-lg ">
                 {/* <AiOutlineBorder color="white"/> */}
-                <AiOutlineClose color="white" className="w-6" onClick={() => {close()}}/>
+                <AiOutlineClose color="white" className="w-6" onClick={() => {close('profile')}}/>
             </div>
             <div className="flex flex-col p-12 justify-start itmes-start overflow-y-auto">
                 
