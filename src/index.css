@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+div#md p {
+  background: #0f0ffa;
+}
+
 /* ubuntu-regular - latin */
 @font-face {
   font-family: 'Ubuntu';

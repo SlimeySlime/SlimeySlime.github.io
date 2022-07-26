@@ -43,17 +43,15 @@ const TopNav = () => {
     }
 
     const help = () => {
-        const ran = Math.floor(Math.random() * helpMsg.length)
-        alert(helpMsg[ran])
-        // console.log(ran)
+        // const ran = Math.floor(Math.random() * helpMsg.length)
+        // alert(helpMsg[ran])
     }
 
     return(
         <div className="flex flex-1 sticky max-h-8 top-0 left-0 py-1 bg-slate-900 text-slate-300 justify-between z-50">
-                        {/* mobile:flex-col" > */}
             <div className="flex flex-1">
                 <div className="pl-2 font-ubuntu font-semibold">
-                    <Link to='/' className="hover:text-slate-50">SlimeyTest</Link>
+                    <Link to='/' className="hover:text-slate-50">Ubuntu</Link>
                 </div>
                 <div className="pl-2 font-ubuntu">
                     <a href="https://github.com/SlimeySlime" target='_blank' rel='gitpage' className="hover:text-white">GitHub</a>
@@ -67,7 +65,7 @@ const TopNav = () => {
                 <div className="pl-2 font-ubuntu">
                     <a href="#" className="hover:text-white">Version</a>
                 </div>
-                <div className="pl-2 font-ubuntu">
+                <div className="hidden pl-2 font-ubuntu">
                     <a href="#" className="hover:text-white" onClick={() => {help()}}>Help</a>
                 </div>
                 <div className="hidden pl-2 font-ubuntu">

@@ -3,10 +3,36 @@ import { FaTrash } from "react-icons/fa";
 import { ImFileExcel, ImProfile } from "react-icons/im";
 import Portfolio from "../post/Portfolio";
 import TestPage from "../post/tp";
+import Window from "../post/Window";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import remarkGfm from "remark-gfm";
+
+
+const md = `
+    # hello world
+    *nice* to meet you
+`
+
+const markdown = `A paragraph with *emphasis* and **strong importance**.
+
+# let't test! 
+
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+
+* Lists
+* [ ] todo
+* [x] done
+
+A table:
+
+| a | b | C |
+| - | - | - |
+
+`
 
 const WallPaper = () => {
 
-    const [portfolioWindow, setPortpolioWindow] = useState(true)
+    const [portfolioWindow, setPortpolioWindow] = useState(false)
     const [testWindow, setTestWindow] = useState(true)
 
     const closeTab = (tab) => {
@@ -23,7 +49,6 @@ const WallPaper = () => {
         }
 
     }
-
 
     return(
     <div className="flex flex-grow bg-gradient-to-br to-purple-900 via-rose-500 from-orange-500">
@@ -61,14 +86,15 @@ const WallPaper = () => {
 
         {testWindow && 
         <div className="absolute left-0 right-0 container flex flex-1">
-            <TestPage close={closeTab} />
+            {/* <TestPage close={closeTab} /> */}
+            <Window close={closeTab} tabName='test' id='md'>
+                <p>md</p>
+                {/* <ReactMarkdown children={markdown} /> */}
+                <ReactMarkdown remarkPlugins={[remarkGfm]} id='md'>{markdown}</ReactMarkdown>
+            </Window>
         </div>
         }
 
-
-        {/* <div className={portfolioWindow ? "opacity-100 translate-x-10?" : "opacity-0 " + " absolute left-0 right-0 container flex flex-1 transition-opacity duration-500 "}>
-            <Portfolio close={closeTab}/>
-        </div> */}
     </div>
     )
 }
