@@ -10,7 +10,7 @@ const Window = ({children, close, tabName}) => {
                 {/* <AiOutlineBorder color="white"/> */}
                 <AiOutlineClose color="white" className="w-6" onClick={() => {close(tabName)}}/>
             </div>
-            <div className="flex flex-col p-12 justify-start itmes-start overflow-y-auto">
+            <div className="flex flex-col p-12 justify-start itmes-start overflow-y-auto" id='md'>
                 {children}
             </div>
         </div>

@@ -16,8 +16,20 @@ code {
     monospace;
 }
 
-div#md p {
-  background: #0f0ffa;
+
+#md h1 {
+  font-size : 36px;
+  border-bottom-width: 2px;
+  margin-bottom: 12px;
+  /* line-height: 1.75rem */
+}
+
+#md p {
+  padding: 1rem;
+}
+#md blockquote {
+  background: #dfdfff;
+  border-left-width: 8px 
 }
 
 /* ubuntu-regular - latin */
