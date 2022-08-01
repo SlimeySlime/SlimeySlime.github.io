@@ -19,9 +19,14 @@ const markdown = `A paragraph with *emphasis* and **strong importance**.
 
 > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
 
-* Lists
+List below
+* 1. Lists
 * [ ] todo
 * [x] done
+
+1. one
+2. two
+3. three
 
 A table:
 
