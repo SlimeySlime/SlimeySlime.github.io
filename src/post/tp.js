@@ -12,7 +12,7 @@ const TestPage = () => {
 
     return(
         <div className="container mt-2 p-0 min-h-max max-h-innerScreen bg-slate-50 shadow-lg overflow-y-auto rounded-lg">
-            <p className="border-l">md</p>
+            <p className="border-b-2">md</p>
             <ReactMarkdown children={md}>{md}</ReactMarkdown>
         </div>
     )
