@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.aadeb3fc.css",
-    "main.js": "/static/js/main.5abf403f.js",
+    "main.js": "/static/js/main.383a4387.js",
     "static/js/787.31c43376.chunk.js": "/static/js/787.31c43376.chunk.js",
     "static/media/ubuntu-v20-latin-regular.woff": "/static/media/ubuntu-v20-latin-regular.6a317272decf6d247038.woff",
     "static/media/ubuntu-v20-latin-regular.woff2": "/static/media/ubuntu-v20-latin-regular.2f02effe392a63dc07a5.woff2",
     "static/media/logo_1_tp.svg": "/static/media/logo_1_tp.6ad56d7d0b50c53429459462e580fa5e.svg",
     "index.html": "/index.html",
     "main.aadeb3fc.css.map": "/static/css/main.aadeb3fc.css.map",
-    "main.5abf403f.js.map": "/static/js/main.5abf403f.js.map",
+    "main.383a4387.js.map": "/static/js/main.383a4387.js.map",
     "787.31c43376.chunk.js.map": "/static/js/787.31c43376.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aadeb3fc.css",
-    "static/js/main.5abf403f.js"
+    "static/js/main.383a4387.js"
   ]
 }
