@@ -38,7 +38,7 @@ A table:
 const WallPaper = () => {
 
     const [portfolioWindow, setPortpolioWindow] = useState(false)
-    const [testWindow, setTestWindow] = useState(true)
+    const [testWindow, setTestWindow] = useState(false)
 
     const closeTab = (tab) => {
         console.log('open', tab)
@@ -70,7 +70,7 @@ const WallPaper = () => {
                 <p className="font-ubuntu font-semibold">프로필</p>
                 
             </div>
-            <div className="flex flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50"
+            <div className="hidden flex? flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50"
                 onClick={() => {setTestWindow(!testWindow)}}>
                 <ImFileExcel size={"52"} color="black" className=''/>
                 <p className="font-ubuntu font-semibold">테스트</p>

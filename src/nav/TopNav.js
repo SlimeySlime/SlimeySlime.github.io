@@ -72,7 +72,7 @@ const TopNav = () => {
                     <Link to={'/ref'}>ref</Link>
                 </div>
             </div>
-            <div className="flex flex-1 font-ubuntu">
+            <div className="flex flex-1 font-ubuntu mobile:hidden">
                 {DisplayDate(currentTime)}
             </div>
             <div className="flex mr-4 gap-2">
