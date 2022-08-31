@@ -97,29 +97,44 @@ const WallPaper = () => {
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
                 
         </div>
+        <div className="relative">
+            { portfolioWindow &&
+            // <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
+            <div>
+                <Window close={onOffTab} fullScreen={fullScreen} tabName='profile'>
+                    <ProfileContent />
+                </Window>
+            </div> 
+            }
+            { trashWindow &&
+            <div>
+                <Window close={onOffTab} fullScreen={fullScreen} tabName="trash">
+                    <Trashbin />
+                </Window>
+            </div>
+            }
+        </div>
+
         { portfolioWindow &&
         // <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
-        <div>
+        <div className="hidden">
             <Window close={onOffTab} fullScreen={fullScreen} tabName='profile'>
                 <ProfileContent />
             </Window>
-            {/* <Portfolio close={onOffTab}/> */}
 
         </div> 
         }
 
         { testWindow && 
         <div className="absolute left-0 right-0 container flex flex-1">
-            {/* <TestPage close={closeTab} /> */}
             <Window close={onOffTab} fullScreen={fullScreen} tabName='test' id='md'>
                 <p>md</p>
-                {/* <ReactMarkdown children={markdown} /> */}
                 <ReactMarkdown remarkPlugins={[remarkGfm]} id='md'>{markdown}</ReactMarkdown>
             </Window>
         </div>
         }
         { trashWindow &&
-        <div>
+        <div className="hidden">
             <Window close={onOffTab} fullScreen={fullScreen} tabName="trash">
                 <Trashbin />
             </Window>
