@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaTrash } from "react-icons/fa";
 import { ImFileExcel, ImProfile } from "react-icons/im";
-import Portfolio from "../post/Portfolio";
-import TestPage from "../post/tp";
-import Window from "../post/Window";
+import Portfolio from "../page/Portfolio";
+import TestPage from "../page/tp";
+import Window from "../page/Window";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
+import Trashbin from "../page/Trashbin";
+import { AiOutlineConsoleSql } from "react-icons/ai";
+import ProfileContent from "../page/ProfileContent";
 
 
 const md = `
@@ -39,8 +42,10 @@ const WallPaper = () => {
 
     const [portfolioWindow, setPortpolioWindow] = useState(false)
     const [testWindow, setTestWindow] = useState(false)
+    const [trashWindow, setTrashWindow] = useState(false)
+    const window = useRef()
 
-    const closeTab = (tab) => {
+    const onOffTab = (tab) => {
         console.log('open', tab)
         switch (tab) {
             case 'profile':
@@ -49,10 +54,17 @@ const WallPaper = () => {
             case 'test':
                 setTestWindow(!testWindow)
                 break;
+            case 'trash':
+                setTrashWindow(!trashWindow)
+                break;
             default:
                 break;
         }
 
+    }
+
+    const fullScreen = (tab) => {
+        console.log('lets fullscreen')
     }
 
     return(
@@ -60,7 +72,8 @@ const WallPaper = () => {
         {/* image cover에서 그냥 gradient */}
         <div className="ml-16 grid grid-rows-12 justify-center items-center ">
         
-            <div className="flex flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50">
+            <div className="flex flex-col w-full h-full justify-center items-center hover:bg-slate-50 hover:opacity-50"
+                onClick={() => {onOffTab("trash")}}>
                 <FaTrash size={"52"} color="black" className=''/>
                 <p className="font-ubuntu font-semibold">휴지통</p>
             </div>
@@ -76,6 +89,7 @@ const WallPaper = () => {
                 <p className="font-ubuntu font-semibold">테스트</p>
                 
             </div>
+            {/* grid place */}
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
@@ -83,19 +97,31 @@ const WallPaper = () => {
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
                 
         </div>
-        {portfolioWindow &&
-        <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
-            <Portfolio close={closeTab}/>
+        { portfolioWindow &&
+        // <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
+        <div>
+            <Window close={onOffTab} fullScreen={fullScreen} tabName='profile'>
+                <ProfileContent />
+            </Window>
+            {/* <Portfolio close={onOffTab}/> */}
+
         </div> 
         }
 
-        {testWindow && 
+        { testWindow && 
         <div className="absolute left-0 right-0 container flex flex-1">
             {/* <TestPage close={closeTab} /> */}
-            <Window close={closeTab} tabName='test' id='md'>
+            <Window close={onOffTab} fullScreen={fullScreen} tabName='test' id='md'>
                 <p>md</p>
                 {/* <ReactMarkdown children={markdown} /> */}
                 <ReactMarkdown remarkPlugins={[remarkGfm]} id='md'>{markdown}</ReactMarkdown>
+            </Window>
+        </div>
+        }
+        { trashWindow &&
+        <div>
+            <Window close={onOffTab} fullScreen={fullScreen} tabName="trash">
+                <Trashbin />
             </Window>
         </div>
         }

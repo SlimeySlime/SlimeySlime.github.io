@@ -19,7 +19,7 @@ module.exports = {
       },
       spacing: {
         'innerScreen' : '90vh',
-        'innerPage' : '80vh'
+        'innerPage' : '85vh'
       },
     },
     
