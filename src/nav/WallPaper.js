@@ -97,10 +97,10 @@ const WallPaper = () => {
             <div className="invisible bg-slate-200 p-4 m-2"> 그리드1 </div>
                 
         </div>
-        <div className="relative">
+        <div>
             { portfolioWindow &&
             // <div className="absolute left-0 right-0 container flex flex-1 transition-left ease-in-out ">
-            <div>
+            <div className="">
                 <Window close={onOffTab} fullScreen={fullScreen} tabName='profile'>
                     <ProfileContent />
                 </Window>

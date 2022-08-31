@@ -5,7 +5,7 @@ import logo from '../logo_1_tp.svg'
 const ProfileContent = () => {
     
     return (
-    <div className="flex flex-col p-12 mobile:p-4 justify-start itmes-start overflow-y-auto">
+    <div className="flex flex-col p-12 mobile:p-2 justify-start itmes-start overflow-y-auto">
             
         <p className="text-2xl">홍진수</p>
         
